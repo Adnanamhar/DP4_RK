@@ -1,0 +1,372 @@
+:root {
+    --primary: #6c5ce7;
+    --bg: #f5f6fa;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI';
+    background: var(--bg);
+}
+
+.wrapper {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    background: linear-gradient(180deg, #6c5ce7, #5a4fcf);
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* MAIN */
+.main {
+    margin-left: 260px;
+    padding: 30px;
+    width: 100%;
+}
+
+/* HEADER */
+.top-header {
+    background: linear-gradient(180deg, #6c5ce7, #5a4fcf);
+    padding: 15px 20px;
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* STATS */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-box {
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+}
+
+.green {
+    background: #28a745;
+}
+
+.yellow {
+    background: #ffc107;
+    color: black;
+}
+
+.red {
+    background: #dc3545;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    color: gray;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background: #f9f9ff;
+}
+
+/* BUTTON */
+.btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-primary {
+    background: var(--primary);
+}
+
+.btn-edit {
+    background: #ffeaa7;
+    color: black;
+}
+
+.btn-delete {
+    background: #ff7675;
+}
+
+/* BADGE */
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.success {
+    background: #d1f7e2;
+    color: green;
+}
+
+.danger {
+    background: #ffe1e1;
+    color: red;
+}
+
+/* SEARCH */
+.search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* TOPBAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ddd;
+}
+
+/* STAT CARD IMPROVE */
+.stat-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-box h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.stat-box small {
+    opacity: 0.9;
+}
+
+.stat-box::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+/* PROGRESS BAR */
+.progress {
+    height: 10px;
+    background: #eee;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* COLORS */
+.bg-green {
+    background: #28a745;
+}
+
+.bg-yellow {
+    background: #ffc107;
+}
+
+.bg-red {
+    background: #dc3545;
+}
+
+/* CARD TITLE */
+.card h3 {
+    margin-top: 0;
+}
+
+.chart-container {
+    width: 300px;
+    margin: auto;
+}
+
+.user-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    border-radius: 6px;
+}
+
+.dropdown-menu a:hover {
+    background: #f1f2f6;
+}
+
+/* LOGIN */
+.login-wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6c5ce7, #1ba0e2);
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background: #6c5ce7;
+    color: white;
+    border: none;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* PAGINATION MODERN */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.pagination a,
+.pagination span {
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.pagination a {
+    background: white;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.pagination a:hover {
+    background: #6c5ce7;
+    color: white;
+}
+
+.pagination .active {
+    background: #6c5ce7;
+    color: white;
+    font-weight: bold;
+}
+
+.pagination .disabled {
+    background: #eee;
+    color: #aaa;
+    pointer-events: none;
+}
+
+td a {
+    margin-right: 5px;
+    font-size: 12px;
+}
