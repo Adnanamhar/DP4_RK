@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["php", "php82Extensions.mysqli"]
+nixPkgs = ["php", "phpExtensions.mysqli"]
 
 [phases.build]
 cmds = ["echo 'Build complete'"]
