@@ -1,11 +1,14 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = "";
-$db = "db_alumni";
+// Ambil data otomatis dari tab Variables di Railway
+$host = getenv('MYSQLHOST');
+$user = getenv('MYSQLUSER');
+$pass = getenv('MYSQLPASSWORD');
+$db   = getenv('MYSQLDATABASE');
+$port = getenv('MYSQLPORT');
 
-$conn = mysqli_connect($host, $user, $password, $db);
+$koneksi = mysqli_connect($host, $user, $pass, $db, $port);
 
-if (!$conn) {
-    die("Koneksi gagal: " . mysqli_connect_error());
+if (!$koneksi) {
+    // Ini akan membantu memunculkan error jika koneksi gagal
+    die("Koneksi Database Gagal: " . mysqli_connect_error());
 }
